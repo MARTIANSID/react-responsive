@@ -6,21 +6,18 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Service from "./components/service";
 import Navbar from "./components/navbar";
+import { Button } from '@material-ui/core';
+
 
 import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" exact component={About} />
-        <Route path="/contact" exact component={Contact} />
-        <Route path="/service" exact component={Service} />
-        <Redirect to="/" />
-      </Switch>
-    </BrowserRouter>
+    <div className="app">
+<h1>Slack clone</h1>
+    </div>
+    
+
   );
 }
 
