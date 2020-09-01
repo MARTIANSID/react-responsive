@@ -1,21 +1,20 @@
-import React from "react";
-import logo from "./logo.svg";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import Home from "./components/home";
-import About from "./components/about";
-import Contact from "./components/contact";
-import Service from "./components/service";
-import Navbar from "./components/navbar";
-import { Button } from "@material-ui/core";
-
+import React, { ReactFragment, useState } from "react";
+import { BrowserRouter, Switch, Route, Redirect,Router } from "react-router-dom";
 import "./App.css";
+import Home from "./components/home"
 
 function App() {
   return (
     <div className="app">
-      <h1>Slack clone</h1>
+      
+        <BrowserRouter>
+          <Switch>
+            <Route path="/search"> <h1>Search Page</h1></Route>
+            <Route path='/' component={Home}></Route>
+          </Switch>
+        </BrowserRouter>
+      
     </div>
   );
 }
-
 export default App;
